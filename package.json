@@ -1,0 +1,30 @@
+{
+  "name": "deeply-freeze",
+  "version": "1.0.1",
+  "description": "Deeply freeze Objects efficiently",
+  "main": "index.js",
+  "keywords": [
+    "deep-freeze",
+    "Object.freeze",
+    "freeze",
+    "immutable"
+  ],
+  "author": "Ben Carp",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-watch": "^3.1.5"
+  }, 
+  "scripts": {
+    "build": "babel lib -d build",
+    "lint": "eslint lib/**; exit 0",
+    "lint:watch": "esw -w lib/**",
+    "prepublish": "npm run build", 
+    "test": "echo \"Error: no test specified\" && exit 1"    
+  }
+}
