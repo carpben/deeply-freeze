@@ -1,8 +1,8 @@
 {
   "name": "deeply-freeze",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Deeply freeze Objects efficiently",
-  "main": "index.js",
+  "main": "build/index.js",
   "keywords": [
     "deep-freeze",
     "Object.freeze",
