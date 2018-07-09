@@ -1,6 +1,6 @@
 {
   "name": "deeply-freeze",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Deeply freeze Objects efficiently",
   "main": "build/index.js",
   "repository": {
@@ -27,8 +27,9 @@
     "build": "babel lib -d build",
     "test": "jest",
     "test-watch": "jest --watch",
-    "prepublishOnly": "npm run lint && npm run build",
-    "lint": ".\\node_modules\\.bin\\eslint .\\lib\\"
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "lint": "eslint lib",
+    "example": "babel-node tests/self"
   },
   "dependencies": {
     "babel-jest": "^23.2.0"
