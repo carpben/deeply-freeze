@@ -1,4 +1,4 @@
-import deepFreeze from "../lib";
+import deepFreeze from "../lib"
 
 
 const tryToMutate = (obj, key1, key2) => {
@@ -22,7 +22,7 @@ test("try to mutate deeplyFreezedObj", () => {
 	expect(() => {
 		tryToMutate(obj, "b", "b")
 	}).toThrow("Cannot assign to read only property 'b' of object '#<Object>'")
-});
+})
 
 
 test("try to mutate array", () => {
@@ -38,10 +38,4 @@ test("try to mutate array", () => {
 	expect(() => {
 		tryToMutate(arr, 2, 0)
 	}).toThrow("Cannot assign to read only property '0' of object '[object Array]'")
-});
-
-test("do nothing if we don't provide an object", () => {
-	deepFreeze(null)
-	deepFreeze(42)
-	deepFreeze("a string")
 })
